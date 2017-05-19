@@ -5,10 +5,23 @@ const express = require('express');
 const app = express();
 
 // Mount a new middleware function
+app.use('/heroes', function(req, res) {
+    // Use the 'response' object to send a respone
+    //res.send('내가 좋아하는 히어로 들입니다.');
+	const hero = [
+		{id: 11,
+		name: '히어로'}
+	];
+
+	res.send(hero);
+});
+
 app.use('/', function(req, res) {
 	// Use the 'response' object to send a respone
 	res.send('Hello World');
 });
+
+
 
 // Use the Express application instance to listen to the '3000' port
 app.listen(3000);

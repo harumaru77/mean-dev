@@ -37,8 +37,9 @@ module.exports = function() {
 	app.set('views', './app/views');
 	app.set('view engine', 'ejs');
 
-	// Load the 'index' routing file
+	// Load the 'index, heroes' routing file
 	require('../app/routes/index.server.routes.js')(app);
+    require('../app/routes/heroes.server.route')(app);
 
 	// Configure static file serving
 	app.use(express.static('./public'));
