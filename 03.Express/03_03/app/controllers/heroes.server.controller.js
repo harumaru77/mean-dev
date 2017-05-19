@@ -45,3 +45,23 @@ exports.getHeroes = function(req, res) {
 
     res.json(heroes);
 };
+
+exports.getNewHeroes = (req, res) => {
+    let fromClient = req.body.key;
+    console.log(fromClient);
+
+    const heroes = [
+        { id: 11, name: '아이언맨11' },
+        { id: 12, name: '아이언맨12' },
+        { id: 13, name: '아이언맨13' },
+        { id: 14, name: '아이언맨14' },
+        { id: 15, name: '아이언맨15' },
+        { id: 16, name: '아이언맨16' },
+        { id: 17, name: '아이언맨17' },
+        { id: 18, name: '아이언맨18' },
+        { id: 19, name: '아이언맨19' },
+        { id: 20, name: '아이언맨20' },
+    ];
+
+    res.json(heroes);
+};
